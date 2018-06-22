@@ -1,0 +1,20 @@
+server:
+  port: 9991
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9901/eureka/
+
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: service-feign
+    protact:
+      path: /**
+      serviceId: service-feign
+
+spring:
+  application:
+    name: service-zuul
