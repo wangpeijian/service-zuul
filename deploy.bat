@@ -1,4 +1,4 @@
-docker build -t service-zuul  --build-arg port=9991  ./
+docker build -t service-zuul  --build-arg port=8080  ./
 
 docker rmi java
 docker stop zuul9991
